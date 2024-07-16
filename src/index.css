@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline{
+  background-color: #323637;
+}
+.anticon.ant-menu-item-icon{
+    position: absolute;
+    right:50%;
+}
+.ant-menu-dark{
+  background-color: #505455;
+}

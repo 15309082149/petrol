@@ -1,0 +1,44 @@
+.all{
+    height:6%;
+    background-color: #383a39;
+}
+.logo{
+    width:180px;
+    background-color: #383a39;
+    height:100%;
+    float: left;
+    color:white;
+    font-size:38px;
+    text-align: center;
+}
+.cate{
+    width:400px;
+    height:100%;
+    float:left;
+}
+.cates1
+{
+        width:25%;
+    height:100%;
+    float: left;
+    color:white;
+    font-size:13px;
+    font-weight:500;
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+    background-color: #1777ff;
+    cursor: pointer;
+}
+.cates{
+    cursor: pointer;
+    width:25%;
+    height:100%;
+    float: left;
+    color:white;
+    font-size:13px;
+    font-weight:500;
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+}

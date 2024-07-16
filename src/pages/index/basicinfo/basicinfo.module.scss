@@ -1,0 +1,59 @@
+.toptext{
+    font-size:14px;
+    height:8%;
+    float: right;
+    width:95%;
+}
+.text{
+    float: left;
+    margin-left:10px;
+    margin-top:1%;
+    font-weight:700;
+}
+.all{
+    height:100%;
+    width:100%;
+}
+.search{
+    width:10%;
+    height:100%;
+    float: right;
+    margin-top:10px;
+    margin-right:10px;
+    text-align: right;
+}
+.form{
+    
+    margin-bottom:1%;
+    height:30%;
+    width:93%;
+    background-color: white;
+    float: right;
+    margin-right:1%;
+}
+.formtop{
+    font-size:13px;
+    border-bottom:1px solid #aaaaaa;
+    height:15%;
+}
+.formtoptext{
+    line-height:30px;
+    margin-left:10px;
+}
+.inputarea{
+    width:100%;
+    height:85%;
+}
+.singleinput{
+    font-size:15px;
+    width:25%;
+    height:30%;
+    float: left;
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+
+}
+.input{
+    width:40%;
+}

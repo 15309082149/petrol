@@ -1,0 +1,65 @@
+.toptext{
+    font-size:14px;
+    height:6%;
+    float: right;
+    width:95%;
+}
+.text{
+    float: left;
+    margin-left:10px;
+    margin-top:15px;
+    font-weight:700;
+}
+.search{
+    width:40%;
+    height:100%;
+    float: right;
+    margin-top:10px;
+}
+.input{
+    width:32%;
+    margin-left:1%;
+}
+.select{
+    width:21%;
+    margin-left:1%;
+}
+  table {
+    border-collapse: collapse; /* 设置表格边框合并为单线 */
+  }
+.tab{
+    width:95%;
+    border-color:#aaaaaa;
+    position: relative;
+    top:10px;
+    line-height:250%;
+    font-size:14px;
+    overflow:hidden;
+}
+.textcolor{
+    color:#aaaaaa;
+    font-size:12px;
+}
+.tooicon{
+    width:13%;
+}
+.reducew{
+    width:5.5%;
+}
+.iconcolor{
+    color:orange;
+}
+.tdicon{
+    float: right;
+    font-size:15px;
+}
+.letterspace{
+    margin-right:5px;
+}
+.op{
+    margin-left:10%;
+    cursor: pointer;
+}
+.optionall{
+    font-size:17px;
+}

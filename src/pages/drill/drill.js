@@ -1,12 +1,35 @@
 import s from './drill.module.scss'
-import { Input,Select, Button } from 'antd';
+import { Input, Select, Button } from 'antd';
 import Pie from '../../components/pie/pie'
 import {
     PlusCircleOutlined,
     FormOutlined,
     DeleteOutlined,
 } from '@ant-design/icons';
+import qs from 'qs'
+ import React, { useRef, useState } from 'react'
+import axios from 'axios'
 const Drill = () => {
+    const dn = useRef(null)
+    const q = useRef(null)
+    const [data,setdata] = useState([])
+    async function oper() {
+        console.log(dn.current.input.value)
+        await axios.get('http://localhost:8080/calc',{
+            params: {
+                Dn:dn.current.input.value.split(","),
+                Q:q.current.input.value.split(",")
+            },
+            paramsSerializer: function (params) {
+                return qs.stringify(params, { arrayFormat: "repeat"});
+            }
+        }
+
+        ).then(result => {
+            setdata(result.data.data)
+            console.log(data)
+        })
+    }
     const array1 = [1,2,3,4,5]
     const array = [1,2,3,4,5,6,7]
     return (
@@ -62,6 +85,30 @@ const Drill = () => {
                         </div><div className={s.inputz}>
                             序列号:<Select className={s.input} defaultValue='ECA525'></Select>
                         </div>
+                        <div className={s.inputz}>
+                            钻头水力参数计算
+                        </div>
+                        <div className={s.inputz}>
+                            水眼号数:<Input className={s.input} ref={dn}></Input>
+                        </div>
+                        <div className={s.inputz}>
+                            排量:<Input className={s.input} ref={q}></Input>&nbsp;&nbsp;&nbsp;<Button className={s.button1} onClick={oper}>计算</Button>
+                        </div>
+                        <div className={s.inputz}>
+                            计算结果
+                        </div>
+                        <div className={s.inputz}>
+                            钻头比水功率:{data.nc && data.nc[0].toFixed(2)}&nbsp;{data.nc && data.nc[1].toFixed(2)}&nbsp;{data.nc && data.nc[2].toFixed(2)}&nbsp;{data.nc && data.nc[3].toFixed(2)}&nbsp;{data.nc && data.nc[4].toFixed(2)}
+                        </div>
+                        <div className={s.inputz}>
+                            钻头压降:{data.pb && data.pb[0].toFixed(2)}&nbsp;{data.pb && data.pb[1].toFixed(2)}&nbsp;{data.pb && data.pb[2].toFixed(2)}&nbsp;{data.pb && data.pb[3].toFixed(2)}&nbsp;{data.pb && data.pb[4].toFixed(2)}
+                        </div>
+                        <div className={s.inputz}>
+                            射流速度:{data.v0 && data.v0[0].toFixed(2)}&nbsp;{data.v0 && data.v0[1].toFixed(2)}&nbsp;{data.v0 && data.v0[2].toFixed(2)}&nbsp;{data.v0 && data.v0[3].toFixed(2)}&nbsp;{data.v0 && data.v0[4].toFixed(2)}
+                        </div>
+                        <div className={s.inputz}>
+                            射流冲击力:{data.fj && data.fj[0].toFixed(2)}&nbsp;{data.fj && data.fj[1].toFixed(2)}&nbsp;{data.fj && data.fj[2].toFixed(2)}&nbsp;{data.fj && data.fj[3].toFixed(2)}&nbsp;{data.fj && data.fj[4].toFixed(2)}
+                        </div>
                     </div>
                     <div className={s.bottomlright}>
                         <div className={s.inputz}>
@@ -80,6 +127,9 @@ const Drill = () => {
                             排屑槽面积比例:<Select className={s.input} defaultValue='33.04' variant='filled'></Select>
                         </div>
                         <Pie></Pie>
+                        <div className={s.inputz}>
+                            射流冲击力:{data.nj && data.nj[0].toFixed(2)}&nbsp;{data.nj && data.nj[1].toFixed(2)}&nbsp;{data.nj && data.nj[2].toFixed(2)}&nbsp;{data.nj && data.nj[3].toFixed(2)}&nbsp;{data.nj && data.nj[4].toFixed(2)}
+                        </div>
                     </div>
                 </div>
                 <div className={s.bottomright}>

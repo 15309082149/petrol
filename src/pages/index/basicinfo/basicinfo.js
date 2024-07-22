@@ -5,7 +5,9 @@ import
 from
 "antd"
 ;
+
 const Basicinfo = () => {
+    
     return (
         <div className={s.all}>
             <div className={s.toptext}>

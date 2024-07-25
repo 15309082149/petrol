@@ -3,7 +3,6 @@ import {
     EnvironmentOutlined,
     HddOutlined,
     ControlOutlined,
-    FieldTimeOutlined,
     GitlabOutlined
 } from '@ant-design/icons';
 import {
@@ -21,10 +20,9 @@ const Headers = () => {
         <div className={s.all}>
             <div className={s.logo}><GitlabOutlined className={s.logoa}/>DRILL</div>
             <div className={s.cate}>
-                <div className={s.cates} onClick={navi}><EnvironmentOutlined />方案优化</div>
-                <div className={s.cates1}><HddOutlined />现场作业</div>
-                <div className={s.cates} onClick={navi2}><ControlOutlined />钻后分析</div>
-                <div className={s.cates}><FieldTimeOutlined />时间数据</div>
+                <div className={s.cates} onClick={navi}><EnvironmentOutlined />数据库</div>
+                <div className={s.cates1}><HddOutlined />单井配置</div>
+                <div className={s.cates} onClick={navi2}><ControlOutlined />工程计算</div>
             </div>
         </div>
     )

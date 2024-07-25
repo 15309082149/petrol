@@ -1,133 +1,178 @@
 import s from './condition.module.scss'
-import { Select, Input } from 'antd';
+import { Button, Input } from 'antd';
 import {
-BoldOutlined,
-LockOutlined,
-PartitionOutlined,
-ToolOutlined,
-PlusCircleOutlined,
-DeleteOutlined,
-EyeOutlined,
-InteractionOutlined,
+
 } from '@ant-design/icons';
 const Condition = () => {
-    const arrry = [1,2,3,4,5,6]
     return (
                 <div className={s.all}>
         <div className={s.toptext}>
-            <div className={s.text}>工况总览</div>
-            <div className={s.search}>
-                    <Select
-      defaultValue="父井筒"
-      className={s.select}
-      options={[
-        {
-          value: 'jack',
-          label: 'Jack',
-        },
-      ]}
-    />
-    <Select
-      defaultValue="接入深度"
-      className={s.select}
-      options={[
-        {
-          value: 'jack',
-          label: 'Jack',
-        },
-      ]}
-    />
-    <Select
-      defaultValue="类型"
-      className={s.select}
-      options={[
-        {
-          value: 'jack',
-          label: 'Jack',
-        },
-      ]}
-    />
-     <Input placeholder="主井筒" className={s.input} />
+            <div className={s.text}>单井配置</div>
+            
+        </div>
+        <div className={s.form}>
+            <div className={s.inputz}>
+                <Input className={s.input}></Input>
+                <Button className={s.button}>确认</Button>
+            </div>
+            <div className={s.mid}>
+                <div className={s.left}>
+                    <div className={s.midtop}>
+                        <div className={s.midtoptext}>井身结构</div>
+                    </div>
+                    <div className={s.midmid}>
+                        <table className={s.table} border='1'>
+                            <tr>
+                                <th className={s.title}>开钻次序</th>
+                                <th>井深 m</th>
+                                <th>钻头尺寸 mm</th>
+                                <th>套管尺寸 mm</th>
+                                <th>套管程序</th>
+                                <th>套管下入地层层位</th>
+                                <th>套管下入深度 m</th>
+                                <th>水泥返高 m</th>
+                            </tr>
+                            <tr>
+                                <td contentEditable='true'>一开</td>
+                                <td contentEditable='true'>50</td>
+                                <td contentEditable='true'>660.4</td>
+                                <td contentEditable='true'>508</td>
+                                <td contentEditable='true'>导管</td>
+                                <td contentEditable='true'>沙二段</td>
+                                <td contentEditable='true'>50</td>
+                                <td contentEditable='true'>地面</td>
+                            </tr>
+                            <tr>
+                                <td contentEditable='true'>二开</td>
+                                <td contentEditable='true'>700</td>
+                                <td contentEditable='true'>444.5</td>
+                                <td contentEditable='true'>365.13</td>
+                                <td contentEditable='true'>表层导管</td>
+                                <td contentEditable='true'>沙二段</td>
+                                <td contentEditable='true'>698</td>
+                                <td contentEditable='true'>地面</td>
+                            </tr>
+                            <tr>
+                                <td contentEditable='true'>三开</td>
+                                <td contentEditable='true'>3200</td>
+                                <td contentEditable='true'>333.4</td>
+                                <td contentEditable='true'>282.58</td>
+                                <td contentEditable='true'>级数套管</td>
+                                <td contentEditable='true'>嘉二亚段</td>
+                                <td contentEditable='true'>3198</td>
+                                <td contentEditable='true'>地面</td>
+                            </tr>
+                            <tr>
+                                <td contentEditable='true' rowSpan={2}>四开</td>
+                                <td contentEditable='true' rowSpan={2}>5281</td>
+                                <td contentEditable='true' rowSpan={2}>241.3</td>
+                                <td contentEditable='true'>177.8</td>
+                                <td contentEditable='true'>油层回接</td>
+                                <td contentEditable='true' rowSpan={2}>灯四段顶</td>
+                                <td contentEditable='true'>0~2798</td>
+                                <td contentEditable='true'>地面</td>
+                            </tr>
+                            <tr>
+                                <td contentEditable='true'>177.8</td>
+                                <td contentEditable='true'>油层悬挂</td>
+                                <td contentEditable='true'>2798~5279</td>
+                                <td contentEditable='true'>2698</td>
+                            </tr>
+                            <tr>
+                                <td contentEditable='true'>五开</td>
+                                <td contentEditable='true'>6645</td>
+                                <td contentEditable='true'>149.2</td>
+                                <td contentEditable='true' colSpan={5}>裸眼完井</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div className={s.line}></div>
+                <div className={s.right}>
+                    <div className={s.midtop}>
+                        <div className={s.midtoptext}>钻具组合</div>
+                    </div>
+                    <div className={s.midmid}>
+                        <div className={s.mode}>
+                            <div className={s.smode}>钻杆</div>
+                            <div className={s.smode}>加重钻杆</div>
+                            <div className={s.smode}>扶正器</div>
+                            <div className={s.smode}>钻链</div>
+                            <div className={s.smode}>螺杆</div>
+                            <div className={s.smode}>套管</div>
+                            <div className={s.smode}>钻头</div>
+                        </div>
+                        <table className={s.table} border='1'>
+                            <tr>
+                                <th className={s.title}>名称</th>
+                                <th>搜索栏</th>
+                                <th>型号</th>
+                                <th>外径(mm)</th>
+                                <th>内径(mm)</th>
+                                <th>线重(kg/m)</th>
+                                <th>长度(m)</th>
+                            </tr>
+                            <tr>
+                                <th contentEditable='true'>钻杆</th>
+                                <th contentEditable='true'>搜索</th>
+                                <td contentEditable='true'>G105</td>
+                                <td contentEditable='true'>60.3</td>
+                                <td contentEditable='true'>46.1</td>
+                                <td contentEditable='true'>11.0</td>
+                                <td contentEditable='true'>7.11</td>
+                            </tr>
+                            <tr>
+                                <th contentEditable='true'>加重钻杆</th>
+                                <th contentEditable='true'>搜索</th>
+                                <td contentEditable='true'>G105</td>
+                                <td contentEditable='true'>60.3</td>
+                                <td contentEditable='true'>46.1</td>
+                                <td contentEditable='true'>11.0</td>
+                                <td contentEditable='true'>7.11</td>
+                            </tr>
+                            <tr>
+                                <th contentEditable='true'>扶正器</th>
+                                <th contentEditable='true'>搜索</th>
+                                <td contentEditable='true'>G105</td>
+                                <td contentEditable='true'>60.3</td>
+                                <td contentEditable='true'>46.1</td>
+                                <td contentEditable='true'>11.0</td>
+                                <td contentEditable='true'>7.11</td>
+                            </tr>
+                            <tr>
+                                <th contentEditable='true'>钻链</th>
+                                <th contentEditable='true'>搜索</th>
+                                <td contentEditable='true'>G105</td>
+                                <td contentEditable='true'>60.3</td>
+                                <td contentEditable='true'>46.1</td>
+                                <td contentEditable='true'>11.0</td>
+                                <td contentEditable='true'>7.11</td>
+                            </tr>
+                            <tr>
+                                <th contentEditable='true'>螺杆</th>
+                                <th contentEditable='true'>搜索</th>
+                                <td contentEditable='true'>G105</td>
+                                <td contentEditable='true'>60.3</td>
+                                <td contentEditable='true'>46.1</td>
+                                <td contentEditable='true'>11.0</td>
+                                <td contentEditable='true'>7.11</td>
+                            </tr>
+                            <tr>
+                                <th contentEditable='true'>钻头</th>
+                                <th contentEditable='true'>搜索</th>
+                                <td contentEditable='true'>G105</td>
+                                <td contentEditable='true'>60.3</td>
+                                <td contentEditable='true'>46.1</td>
+                                <td contentEditable='true'>11.0</td>
+                                <td contentEditable='true'>7.11</td>
+                            </tr>
+                        </table>
+                        </div>
+                </div>
             </div>
         </div>
-        <table border='1' className={s.tab}>
-            <tr>
-                <th>开次</th>
-                <th>施工步骤</th>
-                <th className={s.tooicon}>趟钻序列</th>
-                <th>详细工况</th>
-                <th className={s.reducew}>开始钻头深度</th>
-                <th>结束钻头深度</th>
-                <th>开始井深</th>
-                <th>结束井深</th>
-                <th>开始时间</th>
-                <th>结束时间</th>
-                <th>操作</th>
-
-            </tr>
-            <tr>
-                <td rowSpan={18}>Intermediate Cating</td>
-                <td rowSpan={18}>250.8mm裸眼钻进</td>
-                <td rowSpan={15}>第4掘钻&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div className={s.tdicon}>
-                    <BoldOutlined  className={s.letterspace}/>
-                    <LockOutlined className={s.iconcolor}/>
-                    <PartitionOutlined className={s.letterspace}/>
-                    <ToolOutlined className={s.letterspace}/>
-                    <PlusCircleOutlined className={s.letterspace}/>
-                    <DeleteOutlined className={s.letterspace}/>
-                    </div>
-                    </td>
-                <td colSpan={8}>石碳系，塔里木组</td>
-            </tr>
-            {arrry.map(()=>{
-                return (
-                    <tr>
-                <td>下钻</td>
-                <td>0</td>
-                <td>4418.16</td>
-                <td>4437.03</td>
-                <td>4437.03</td>
-                <td>2024-03-31 08:52:06</td>
-                <td>2024-04-01 07:51:45</td>
-                <td className={s.optionall}>
-                    <EyeOutlined className={s.op}/>
-                    <InteractionOutlined className={s.op}/>         
-                </td>
-            </tr>
-                )
-            })}
-            <tr>
-                <td colSpan={8} className={s.textcolor}>
-                    输入自定义消息
-                </td>
-            </tr>
-            <tr>
-                <th colSpan={3}>起钻原因</th>
-                <th colSpan={2}>层校</th>
-                <th>趟钻进尺(m)</th>
-                <th colSpan={2}>平均机械钻速(m/hr)</th>
-            </tr>
-            {arrry.map(()=>{
-                return (
-                    <tr>
-                <td>起钻</td>
-                <td>7742.24</td>
-                <td>1992.03</td>
-                <td>7763</td>
-                <td>7763</td>
-                <td>2024-04-20 05:21:42</td>
-                <td>2024-04-21 06:40:57</td>
-                <td className={s.optionall}>
-                    <EyeOutlined className={s.op}/>
-                    <InteractionOutlined className={s.op}/>
-                </td>
-
-            </tr>
-                )
-            })}
-
-        </table>
+    
         </div>
     )
 }

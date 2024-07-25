@@ -1,103 +1,62 @@
 .toptext{
     font-size:14px;
-    height:6%;
+    height:8%;
     float: right;
     width:95%;
 }
 .text{
     float: left;
     margin-left:10px;
-    margin-top:15px;
+    margin-top:1%;
     font-weight:700;
-}
-.search{
-    width:40%;
-    height:100%;
-    float: right;
-    margin-top:10px;
-}
-.input{
-    width:32%;
-    margin-left:1%;
-}
-.select{
-    width:21%;
-    margin-left:1%;
-}
-.mode{
-    height:94%;
-    width:95%;
-    float: right;
-}
-.smode{
-    height:15%;
-    width:18.7%;
-    margin-left:1%;
-    float: left;
-    margin-top:20px;
-    background-color: white;
-    border-radius:2px;
-    border:1px solid rgba(0,0,1,.2);
 }
 .all{
     height:100%;
     width:100%;
 }
-.sm{
-    height:75%;
-    width:100%;
-}
-.midline{
-    width:80%;
-    margin-left:10%;
-    border:1px solid #eff2f1;
-}
-.xm{
-    width:100%;
-    height:25%;
-}
-.iconbig{
-    width:20%;
+.search{
+    width:10%;
     height:100%;
-    font-size:45px;
-    display:flex; 
-    align-items:center;
-    justify-content:center;
-    float: left;
-}
-.name{
-    width:80%;
-    height:50%;
     float: right;
-    font-size:18px;
-    font-weight:700;
-    position: relative;
+    margin-top:10px;
+    margin-right:10px;
+    text-align: right;
 }
-.nameposi{
-    position: absolute;
-    bottom:0px;
-}
-.endname{
-    font-size:18px;
-}
-.xmicon{
-    width:30%;
+.form{
+    
+    margin-bottom:1%;
+    height:92%;
+    width:93%;
+    background-color: white;
     float: right;
-    height:100%;
-    color:#a0a3a6;
-    font-size:17px;
-    padding-left:30%;
+    margin-right:1%;
 }
-.singleicon{
+.button{
     float: left;
-    margin-left:10px;
+    margin-left:1%;
 }
-.add{
+.input{
+    width:10%;
+    float: left;
+    margin-left:5%;
+}
+.formtopb{
+    height:10%;
     width:100%;
-    height:100%;
-    font-size:45px;
-    color:#aaaaaa;
-    display:flex; 
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    display: flex;
+}
+.formtopb{
+    height:10%;
+    width:100%;
+    align-items: center;
+    display: flex;
+}
+.tablez{
+    width:100%;
+    height:90%;
+}
+.table{
+    width: 96%;
+    margin-left:2%;
 }

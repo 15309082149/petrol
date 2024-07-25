@@ -25,35 +25,35 @@
 .form{
     
     margin-bottom:1%;
-    height:30%;
+    height:92%;
     width:93%;
     background-color: white;
     float: right;
     margin-right:1%;
 }
-.formtop{
-    font-size:13px;
-    border-bottom:1px solid #aaaaaa;
-    height:15%;
-}
-.formtoptext{
-    line-height:30px;
-    margin-left:10px;
-}
-.inputarea{
-    width:100%;
-    height:85%;
-}
-.singleinput{
-    font-size:15px;
-    width:25%;
-    height:30%;
+.button{
     float: left;
-    display:flex; 
-    align-items:center;
-    justify-content:center;
-
+    margin-left:1%;
 }
 .input{
-    width:40%;
+    width:10%;
+    float: left;
+    margin-left:5%;
+}
+.formtopb{
+    height:10%;
+    width:100%;
+    align-items: center;
+    display: flex;
+}
+.tablez{
+    width:100%;
+    height:90%;
+}
+.table{
+    width: 96%;
+    margin-left:2%;
+}
+.pagi{
+    position: absolute;
 }

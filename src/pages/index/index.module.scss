@@ -28,3 +28,29 @@
     text-align: center;
     line-height:30px;
 }
+.menue{
+    background-color: #505455;
+        height:100%;
+        align-items: center;
+}
+.ant-menu-title-content{
+    color:white;
+    display: block;
+    width:70%;
+    float: left;
+}
+.top{
+    height:6%;
+
+}
+.logo{
+    width:10%;
+    float: left;
+    background-color: #505455;
+    height:100%;
+    font-size:30px;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}

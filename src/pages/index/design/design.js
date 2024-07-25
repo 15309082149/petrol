@@ -1,84 +1,42 @@
 import s from './design.module.scss'
-import { Select, Input } from 'antd';
-import {
-    LinuxOutlined,
-    OpenAIOutlined,
-    LockOutlined,
-    DeleteOutlined,
-    PlusCircleOutlined,
-} from '@ant-design/icons';
+import { Button } from 'antd';
+import
+{ Input }
+from
+"antd"
+;
 const Design = () => {
-    const array = [1,2,3,4,5]
     return (
-        <div className={s.all}>
-        <div className={s.toptext}>
-            <div className={s.text}>设计方案</div>
-            <div className={s.search}>
-                    <Select
-      defaultValue="所有油田公司"
-      className={s.select}
-      options={[
-        {
-          value: 'jack',
-          label: 'Jack',
-        },
-      ]}
-    />
-    <Select
-      defaultValue="所有区块"
-      className={s.select}
-      options={[
-        {
-          value: 'jack',
-          label: 'Jack',
-        },
-      ]}
-    />
-    <Select
-      defaultValue="所有类型"
-      className={s.select}
-      options={[
-        {
-          value: 'jack',
-          label: 'Jack',
-        },
-      ]}
-    />
-     <Input placeholder="输入井号过滤" className={s.input} />
+                <div className={s.all}>
+            <div className={s.toptext}>
+                <div className={s.text}>基本信息</div>
+                <div className={s.search}>
+                </div>
             </div>
-        </div>
-        <div className={s.mode}>
-            {array.map(()=>{
-                return (<div className={s.smode}>
-                <div className={s.sm}>
-                    <div className={s.iconbig}>
-                        <LinuxOutlined />
-                    </div>
-                    <div className={s.name}>
-                        <div className={s.nameposi}>MX022-H28</div>
-                    </div>
-                    <div className={s.endname}><OpenAIOutlined /></div>
+            <div className={s.form}>
+                <div className={s.formtopb}>
+                <Button className={s.button}>增加钻头</Button>
+                <Input className={s.input}></Input>
+                <Button className={s.button}>搜索</Button>
                 </div>
-                <div className={s.midline}></div>
-                <div className={s.xm}>
-                    <div className={s.xmicon}>
-                        <div className={s.singleicon}>
-                            <DeleteOutlined />
-                        </div>
-                        <div className={s.singleicon}>
-                            <LockOutlined />
-                        </div>
-                    </div>
-                </div>
-            </div>)
-            })}
-            <div className={s.smode}>
-                <div className={s.add}>
-                    <PlusCircleOutlined />
+                <div className={s.tablez}>
+                    <table className={s.table} border='1'>
+                        <tr>
+                            <th>钢级</th>
+                            <th>公称外径 mm</th>
+                            <th>内径 mm</th>
+                            <th>管体壁厚 mm</th>
+                            <th>屈服强度 psi</th>
+                            <th>接体连接螺纹 扣型</th>
+                            <th>公扣根部 直径mm</th>
+                            <th>管体内压强度 MPa</th>
+                            <th>开端排量 L/m</th>
+                            <th>容积 L/m</th>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
     )
 }
 export default Design
